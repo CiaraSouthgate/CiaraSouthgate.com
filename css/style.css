@@ -135,8 +135,8 @@ a.nav:hover {
   text-decoration-color: #1D7864;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 361px) {
   .nav {
-    font-size: 2vh;
+    font-size: 2.3vh;
   }
 }
