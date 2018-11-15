@@ -30,7 +30,7 @@
     </div>
     <div class="content">
       <section class="child">
-        <h3>Hey, I'm Ciara.</h3>
+        <h3>Hey, I'm <span id="myName">Ciara</span>.<div id="popup"><i>( <span class="fas fa-key"></span>-ra )</i></div></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit laoreet id donec ultrices tincidunt arcu non. Eu sem integer vitae justo eget magna. Non tellus orci ac auctor augue mauris. A diam sollicitudin tempor id eu nisl nunc. Ultricies lacus sed turpis tincidunt id aliquet risus. Tortor posuere ac ut consequat. Sed risus ultricies tristique nulla aliquet enim tortor. Nam aliquam sem et tortor consequat id. Purus semper eget duis at tellus at urna condimentum mattis.</p>
 
         <p>Dolor sit amet consectetur adipiscing. Nunc congue nisi vitae suscipit tellus mauris a diam. Tortor vitae purus faucibus ornare suspendisse sed. Et malesuada fames ac turpis egestas integer eget. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Tellus mauris a diam maecenas sed. At auctor urna nunc id cursus metus aliquam. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Auctor elit sed vulputate mi sit. Diam maecenas sed enim ut sem. Amet justo donec enim diam vulputate ut pharetra sit amet. Sit amet commodo nulla facilisi nullam vehicula. Ornare arcu dui vivamus arcu felis. Lacus sed viverra tellus in. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Viverra mauris in aliquam sem fringilla ut.</p>
@@ -51,6 +51,15 @@
         </div>
       </div>
     </footer>
+    <script>
+      var e = document.getElementById("myName");
+      e.onmouseover = function() {
+        document.getElementById("popup").style.display = 'inline-block';
+      }
+      e.onmouseout = function() {
+        document.getElementById("popup").style.display = 'none';
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
