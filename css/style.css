@@ -91,7 +91,7 @@ div.content {
 #popup {
   display: none;
   font-size: 14pt;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 a.arrow {
@@ -136,7 +136,7 @@ a.nav:hover {
 }
 
 @media (max-width: 350px) {
-  * {
-    font-size: 94%;
+  .nav {
+    font-size: 2vh;
   }
 }
