@@ -44,7 +44,7 @@ div.title {
 
 h1 {
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin: 0 auto;
   font-size: 24pt;
   font-weight: bold;
@@ -56,6 +56,13 @@ h2 {
   margin: 0 auto;
   font-size: 16pt;
   font-family: "Open Sans", sans-serif;
+}
+
+h3, #myName{
+  font-size: 26pt;
+  font-weight: 600;
+  font-family: Lato;
+  color: #1D7864;
 }
 
 div.navhead {
@@ -73,25 +80,44 @@ div.navhead {
 }
 
 div.links a {
-  color: #B5CD9A;
+  color: black;
+  text-align: center;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 4px;
 }
 
-div.nav a {
+div.link {
   color: black;
   border-left: 1.5px #1D7864 solid;
   border-right: 1.5px #1D7864 solid;
-  padding: 3px;
+  text-align: center;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: table;
 }
 
 div.content {
   position: relative;
   margin: 40px;
+  padding-bottom: 30px;
+  scroll-snap-type: y mandatory;
+}
+
+section.child {
+  scroll-snap-align: start;
+  margin: 40px auto;
 }
 
 #popup {
   display: none;
   font-size: 14pt;
-  margin-left: 20px;
+  opacity: .75;
+  position: relative;
+  left: 3%;
+  bottom: 2px;
 }
 
 a.arrow {
@@ -125,6 +151,32 @@ footer {
   margin: 5px;
 }
 
+input, textarea {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #1D7864;
+  padding: 3px;
+  margin: 4px auto;
+  box-shadow: none;
+}
+
+.message {
+  height: 100px;
+  overflow: wrap;
+}
+
+.send {
+  width: 100px;
+  background-color: #1D7864;
+  color: white;
+  border-radius: 6px;
+  position: relative;
+  right: 0;
+  display: block;
+  margin: 10px 10% 0 auto;
+  
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -137,6 +189,10 @@ a.nav:hover {
 
 @media (max-width: 361px) {
   .nav {
-    font-size: 2.3vh;
+    font-size: 4vw;
+  }
+  
+  #popup {
+    font-size: 4.5vw;
   }
 }
