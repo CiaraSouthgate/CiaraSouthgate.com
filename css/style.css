@@ -10,6 +10,7 @@
 img.mepic {
   width: 100%;
   height: auto;
+  
   margin: 0;
   z-index: -1;
 }
@@ -110,11 +111,11 @@ div.link {
 div.content {
   position: relative;
   margin: 0 40px;
-  display: table;
-  
+}
+
+div.container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  
 }
 
 #about {
@@ -123,7 +124,7 @@ div.content {
 
 .child {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   
   scroll-snap-align: center;
   scroll-padding-top: 40px;
@@ -222,6 +223,13 @@ a.nav:hover {
   #popup {
     font-size: 4.5vw;
   }
+}
+
+@media (min-width: 576px) {
+  div.content {
+    margin: 0 auto;
+  }
+  
 }
 
 @media (min-width: 768px) {
