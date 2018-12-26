@@ -115,9 +115,6 @@ div.content {
   scroll-snap-type: y mandatory;
 }
 
-div.container {
-}
-
 #about {
   padding-top: 75px;
 }
@@ -223,13 +220,6 @@ a.nav:hover {
   #popup {
     font-size: 4.5vw;
   }
-}
-
-@media (min-width: 576px) {
-  div.content {
-    margin: 0 auto;
-  }
-  
 }
 
 @media (min-width: 768px) {
