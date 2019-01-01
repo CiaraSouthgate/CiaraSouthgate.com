@@ -51,6 +51,8 @@ $(document).ready(function () {
   $("#next").click(function() {
     if ($(window).width() < 768 && !descriptionVisible) {
       $("#mmDescription").css("animation", "appear 1s forwards");
+      $("#previous").css("display", "initial");
+      $("#next").css("display", "none");
       descriptionVisible = true;
     }
   });
@@ -58,6 +60,8 @@ $(document).ready(function () {
   $("#previous").click(function() {
     if ($(window).width() < 768 && descriptionVisible) {
       $("#mmDescription").css("animation", "disappear 1s forwards");
+      $("#previous").css("display", "none");
+      $("#next").css("display", "initial");
       descriptionVisible = false;
     }
   });

@@ -245,6 +245,7 @@ a:hover {
   left: -25px;
   z-index: 4;
   vertical-align: middle;
+  display: none;
 }
 
 #next {
