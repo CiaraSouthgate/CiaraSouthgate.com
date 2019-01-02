@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +55,7 @@
   z-index: -1;
 }
 
-.mepicwide {
+.mepicwide, .mepicvwide {
   display: none;
 }
 
@@ -54,28 +94,13 @@ h2 {
   font-family: "Open Sans", sans-serif;
 }
 
-#about h3 {
+h3 {
   display: inline-block;
-}
-
-h3, #myName{
   font-size: 26pt;
   font-weight: 600;
   font-family: Lato;
   color: #1D7864;
   margin-bottom: 20px;
-}
-
-h4 {
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  color: #1D7864;
-  font-size: 16pt;
-}
-
-h5 {
-  font-weight: bold;
-  color: #1D7864;
 }
 
 .navhead {
@@ -147,58 +172,48 @@ a:hover {
 #skills {
   text-align: right;
 }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(70px);
+  
+  #played {
+    display: none;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-}
 
 .logos img:nth-child(2) {
-  animation-delay: .5s;
+  animation-delay: .25s;
 }
 
 .logos img:nth-child(3) {
-  animation-delay: 1s;
+  animation-delay: .5s;
 }
 
 .logos img:nth-child(4) {
-  animation-delay: 1.5s;
+  animation-delay: .75s;
 }
 
-.logos img:nth-child(6) {
-  animation-delay: 2s;
+.logos img:nth-child(5) {
+  animation-delay: 1s;
 }
 
 .logos img:nth-child(7) {
-  animation-delay: 2.5s;
+  animation-delay: 1.25s;
 }
 
 .logos img:nth-child(8) {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
+}
+
+.logos img:nth-child(9) {
+  animation-delay: 1.75s;
+}
+
+.logos img:nth-child(10) {
+  animation-delay: 2s;
 }
 
 .logo {
   height: 15vw;
   max-height: 80px;
   width: auto;
-  margin: 15px;
+  margin: 5px;
 }
 
 .hidden {
@@ -210,9 +225,14 @@ a:hover {
   animation: fade-in 1s forwards;
 }
 
+#bootstrap {
+  padding: 5px;
+  margin: 0;
+}
+
 #python {
   padding: 5px;
-  margin: 10px;
+  margin: 0;
 }
 
 .gallery {
@@ -260,24 +280,6 @@ a:hover {
   margin: auto;
   height: 75vh;
   width: auto;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 .description {
@@ -344,6 +346,10 @@ footer {
   
   .pic {
     background-color: black;
+    position: relative;
+    right: 0;
+    margin-right: 0;
+    overflow: hidden;
   }
   
   .mepicwide {
@@ -369,6 +375,15 @@ footer {
   
   .logo {
     height: 80px;
+    margin: 15px;
+  }
+  
+  #bootstrap {
+    margin: 10px;
+  }
+  
+  #python {
+    margin: 10px;
   }
   
   .content {
@@ -410,5 +425,19 @@ footer {
   .navhead {
     position: sticky;
     top: 0;
+  }
+  
+  .mepicwide {
+    display: none;
+  }
+  
+  .mepicvwide {
+    display: block;
+    width: auto;
+    height: 250px;
+    position: relative;
+    right: 0;
+    margin-right: 0;
+    margin-left: auto;
   }
 }

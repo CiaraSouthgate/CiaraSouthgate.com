@@ -1,12 +1,23 @@
 $(document).ready(function () {
+  
   $("#myName").hover(
-    function () {
+    function() {
       $("#popup").css("animation", "fade-in .5s forwards");
+      console.log("hover");
     },
-    function () {
+    function() {
       $("#popup").css("animation", "fade-out .5s forwards");
     }
   );
+  
+//  $("#worked").hover(
+//    function() {
+//      $("#worked").html("played");
+//    },
+//    function() {
+//      $("#worked").html("worked");
+//    }
+//  )
 
   var animateLogos = function () {
     var elems;
@@ -46,7 +57,6 @@ $(document).ready(function () {
   });
   
   var descriptionVisible = false;
-  var projects = 
   
   $("#next").click(function() {
     if ($(window).width() < 768 && !descriptionVisible) {
