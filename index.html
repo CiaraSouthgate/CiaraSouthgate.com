@@ -52,25 +52,25 @@
     <section class="child" id="skills">
       <h3>I've <span id="worked">worked</span><span id="played">played</span> with...</h3>
       <div class="logos">
-        <img class="logo hidden" id="html" src="images/logos/html.png" alt="HTML">
-        <img class="logo hidden" id="css" src="images/logos/css.png" alt="CSS">
-        <img class="logo hidden" id="js" src="images/logos/js.png" alt="JavaScript">
-        <img class="logo hidden" id="jquery" src="images/logos/jquery.png" alt="JQuery">
-        <img class="logo hidden" id="bootstrap" src="images/logos/bootstrap.png" alt="Bootstrap"><br>
-        <img class="logo hidden" id="node" src="images/logos/node.png" alt="Node.js">
         <img class="logo hidden" id="java" src="images/logos/java.png" alt="Java">
         <img class="logo hidden" id="python" src="images/logos/python.png" alt="Python">
+        <img class="logo hidden" id="html" src="images/logos/html.png" alt="HTML">
+        <img class="logo hidden" id="css" src="images/logos/css.png" alt="CSS">
+        <img class="logo hidden" id="js" src="images/logos/js.png" alt="JavaScript"><br>
+        <img class="logo hidden" id="node" src="images/logos/node.png" alt="Node.js">
+        <img class="logo hidden" id="jquery" src="images/logos/jquery.png" alt="JQuery">
+        <img class="logo hidden" id="bootstrap" src="images/logos/bootstrap.png" alt="Bootstrap">
         <img class="logo hidden" id="android" src="images/logos/android.png" alt="Android Studio">
       </div>
     </section>
     <section class="child" id="projects">
       <h3>Projects</h3>
-      <div class="gallery">
+      <div class="gallery" id="gallery">
         <div id="previous" class="projectsArrow"><span class="fas fa-chevron-left"></span></div>
         <div id="next" class="projectsArrow"><span class="fas fa-chevron-right"></span></div>
-        <div class="projectDiv medManager">
-          <img class="projectPic medManager" src="images/projects/medmanager.png" alt="MedManager">
-          <div class="description medManager" id="mmDescription">
+        <div class="projectDiv" id="mmDiv">
+          <img class="projectPic" id="mmPic" src="images/projects/medmanager.png" alt="MedManager">
+          <div class="description" id="mmDescription">
             <p><b><i>MedManager</i></b> is a web app designed to help people keep track of their medications. I worked with two classmates to create it as part of a term one Projects course.</p>
             <p>Users can enter and edit their medications and view them broken down by time of day. Medications that are overdue or upcoming will display an icon to alert the user.</p>
             <p>Users' medications are stored in a Firebase database. The page is populated by programatically creating elements to display each medication at the appropriate times.</p>
@@ -78,6 +78,17 @@
             <p>
               <a href="https://medmanager-9a443.firebaseapp.com/"><i>MedManager</i></a><br>
               <a href="https://github.com/CiaraSouthgate/MedManager">GitHub Repo</a>
+            </p>
+          </div>
+        </div>
+        <div class="projectDiv" id="wizardDiv">
+          <img class="projectPic" id="wizardPic" src="images/projects/wizard.png" alt="Wizard Scorekeeper">
+          <div class="description" id="wizardDescription">
+            <p>I'm a big fan of board and card games, and Wizard is one that I quite enjoy...as long as someone else does the scoring. I figured there had to be an app to score the game, but none of the available offerings were quite what I wanted. The only solution? Build my own.</p>
+            <p>I created a text-only version in Java to make sure I had the logic down, then started learning Android Studio to create the app. It's still a work in progress, but I've learned a lot doing it. The biggest challenge has been getting the layouts to work the way I want them to, especially when they're modified programatically.</p>
+            <p>I'm really looking forward to the finished product. It will be something my friends and I can use, and I may make it available on the Play Store.</p>
+            <p>
+              <a href="https://github.com/CiaraSouthgate/WizardScorerAndroid">GitHub Repo</a>
             </p>
           </div>
         </div>
