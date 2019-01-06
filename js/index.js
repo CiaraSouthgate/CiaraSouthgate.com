@@ -53,22 +53,22 @@ window.addEventListener("hashchange", function () {
   window.scrollTo(window.scrollX, window.scrollY - 90);
 });
 
-var projects = $("#gallery").find(".projectDiv");
+var proj = $("#gallery").find(".projectDiv");
 var descriptionVisible = false;
 var projectVisible = 0;
 
 $("#next").click(function() {
-  var current = projects[projectVisible];
-  var next = projects[projectVisible + 1];
+  var current = proj[projectVisible];
+  var next = proj[projectVisible + 1];
   if ($(window).width() < 768) {
     if (!descriptionVisible) {
       let description = $(current).find(".description");
       $(description).css("animation", "appear 1s forwards");
       descriptionVisible = true;
-      
+
       $("#previous").css("display", "table-cell");
 
-      if (projectVisible + 1 == projects.length) {
+      if (projectVisible + 1 == proj.length) {
         $("#next").css("display", "none");
       }
     } else {
@@ -77,7 +77,7 @@ $("#next").click(function() {
       $(next).css("display", "inline-block");
       $(next).css("animation", "appear 1s forwards");
       $(current).css("display", "none");
-      
+
       descriptionVisible = false;
       projectVisible++;
     }
@@ -86,35 +86,28 @@ $("#next").click(function() {
     $(next).css("display", "block");
     $(next).css("animation", "appear 1s forwards");
     $(current).css("display", "none");
-      
+
     $("#previous").css("display", "table-cell");
-    
+
     projectVisible++;
-    
-    if (projectVisible + 1 == projects.length) {
+
+    if (projectVisible + 1 == proj.length) {
         $("#next").css("display", "none");
       }
   }
 });
 
-$(window).resize(function() {
-  if ($(window).width() >= 768) {
-    var des = $(".projectDiv").find(".description");
-    $(des).css("opacity", "1");
-  }
-});
-
 $("#previous").click(function() {
-  var current = projects[projectVisible];
-  var next = projects[projectVisible - 1];
+  var current = proj[projectVisible];
+  var next = proj[projectVisible - 1];
   if ($(window).width() < 768) {
     if (descriptionVisible) {
       let description = $(current).find(".description");
       $(description).css("animation", "disappear 1s forwards");
       descriptionVisible = false;
-      
+
       $("#next").css("display", "table-cell");
-      
+
       if (projectVisible == 0) {
         $("#previous").css("display", "none");
       }
@@ -124,7 +117,7 @@ $("#previous").click(function() {
       $(next).css("display", "inline-block");
       $(next).css("animation", "appear 1s forwards");
       $(current).css("display", "none");
-      
+
       descriptionVisible = true;
       projectVisible--;
     }
@@ -133,11 +126,11 @@ $("#previous").click(function() {
     $(next).css("display", "block");
     $(next).css("animation", "appear 1s forwards");
     $(current).css("display", "none");
-    
+
     $("#next").css("display", "table-cell");
-    
+
     projectVisible--;
-    
+
     if (projectVisible == 0) {
       $("#previous").css("display", "none");
     }
