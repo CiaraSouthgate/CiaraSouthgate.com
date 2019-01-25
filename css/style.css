@@ -356,6 +356,11 @@ a:hover {
   opacity: 0;
 }
 
+.play {
+  height: 50px;
+  margin-left: -10px;
+}
+
 .arrow {
   color: #1D7864;
   font-size: 20pt;
